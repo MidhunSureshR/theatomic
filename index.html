@@ -569,7 +569,7 @@ padding-bottom: 190px;">
                 </svg>
 
               </span>
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="Requirement">
 
                 <option selected value="" disabled hidden>Requirement</option>
                 <option value="1">Run an Event</option>
@@ -583,7 +583,7 @@ padding-bottom: 190px;">
                 </svg>
 
               </span>
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="Seat">
 
                 <option selected value="" disabled hidden>Number of Seats</option>
                 <option value="1">Terrace (80+ seats)</option>
@@ -594,11 +594,12 @@ padding-bottom: 190px;">
             </div>
 
             <div class="col-md-12 col-xs-12">
-              <textarea rows="4" placeholder="Additional Notes"></textarea>
+              <textarea rows="4" placeholder="Additional Notes" id="AdditionalNotes"></textarea>
             </div>
 
 
-            <a href="#" class="btn btn-lg rounded-pill submit mt-2">Submit Enquiry <span style="margin-left:12px">
+            <a href="#" class="btn btn-lg rounded-pill submit mt-2" onclick="booking.storeBooking()">Submit Enquiry
+              <span style="margin-left:12px">
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.2857 0L9.61905 0.694168L14.1905 5.55371H0V6.54544H14.1905L9.61905 11.3059L10.2857 12L16 6.04957L10.2857 0Z"

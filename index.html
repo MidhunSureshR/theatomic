@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.79.0">
+  <title>Atomic</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="owl/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/css/owl.theme.default.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+  <link href="starter-template. css" rel="stylesheet">
+  <script>
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script>
+  <style>
+    .fixed-top.scrolled {
+      background-color: #fff !important;
+      transition: background-color 200ms linear;
+    }
+  </style>
+  <script src="owl/js/jquery.min.js"></script>
+  <script src="owl/js/owl.carousel.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top header">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <svg width="150" height="75" viewBox="0 0 116 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M23.5592 7.3188L24.5821 5.25H18.0203L16.301 13.6928H22.3361L23.3567 11.6241H19.1934L19.4436 10.4005H22.0357L23.0586 8.33393H19.8724L20.0791 7.3188H23.5592Z"
+              fill="white" />
+            <path
+              d="M39.0983 0.330811H32.5301L23.4872 18.6123H28.9478L30.6149 14.912H35.3876L35.6945 18.6077H40.9178L39.0983 0.330811ZM32.3734 10.7541C33.4093 8.50628 34.2581 6.62103 34.9197 4.99636C34.9893 6.58251 35.1221 8.6513 35.2941 10.7541H32.3734Z"
+              fill="white" />
+            <path
+              d="M56.161 0.330811H41.5902L40.7262 4.48426H45.4206L42.5609 18.6123H47.7798L50.6395 4.48426H55.2969L56.161 0.330811Z"
+              fill="white" />
+            <path
+              d="M69.835 2.29765C68.5292 0.79534 66.5509 0 64.1286 0C57.6387 0 54.2414 5.74866 54.2414 11.427C54.2414 16.1334 56.9967 18.9432 61.6127 18.9432C64.8773 18.9432 67.5411 17.7127 69.317 15.3879C70.8209 13.4188 71.6479 10.7156 71.6479 7.7744C71.6479 5.55152 71.019 3.65721 69.835 2.29765ZM62.1372 14.8667C60.0458 14.8667 59.6083 13.054 59.6083 11.5177C59.6201 9.82755 59.9879 8.16071 60.6856 6.63464C61.2493 5.46768 62.2656 4.0764 63.8957 4.0764C65.5258 4.0764 66.3681 5.20936 66.3681 7.4753C66.3681 10.3304 65.219 14.8667 62.1372 14.8667Z"
+              fill="white" />
+            <path
+              d="M93.4227 0.330663H85.9201L85.8635 0.471152C85.4918 1.36393 85.1087 2.2703 84.73 3.16987C83.5526 5.97055 82.4318 8.63756 81.6265 10.7789C81.7376 7.93965 81.8115 3.47124 81.7897 0.561788V0.335195H74.4598L70.7361 18.6121H75.474L76.6644 12.7548C77.0997 10.6519 77.5241 8.32939 77.8462 6.41015C77.7983 8.66248 77.7852 11.2185 77.7744 13.7155C77.7744 15.3175 77.7592 16.9014 77.7417 18.3742V18.6008H81.9791L82.0379 18.4603C83.9966 13.8288 85.7856 9.30151 86.9979 6.19035C86.5627 8.11639 86.064 10.4957 85.6571 12.5078L84.4232 18.6008H89.7027L91.2269 11.0984H87.4571L93.4227 0.319336V0.330663Z"
+              fill="white" />
+            <path d="M94.4671 0.330811L92.9395 7.8333H96.8806L90.7453 18.6123H96.2714L99.9932 0.330811H94.4671Z"
+              fill="white" />
+            <path
+              d="M108.576 4.06727C109.998 4.06727 110.638 4.80823 110.644 6.47368V6.70028H115.919V6.47368C115.919 4.62242 115.373 3.0544 114.309 1.94183C113.099 0.672911 111.247 0.00219727 108.953 0.00219727C105.763 0.00219727 103.144 1.36176 101.381 3.91772C99.9795 5.95705 99.175 8.6875 99.175 11.4134C99.175 16.1991 101.747 18.9453 106.232 18.9453C110.683 18.9453 113.658 16.7202 114.833 12.5078L114.919 12.2087H109.617L109.56 12.356C109.059 13.6522 108.37 14.8486 106.731 14.8486C105.316 14.8486 104.628 13.8039 104.628 11.6559C104.624 8.4745 105.997 4.06727 108.576 4.06727Z"
+              fill="white" />
+            <path
+              d="M2.35919 7.3188H4.47897L3.18839 13.6928H5.73255L7.02313 7.3188H9.1233L9.55425 5.25H2.79012L2.35919 7.3188Z"
+              fill="white" />
+            <path
+              d="M14.6686 5.25L14.0571 8.24556H12.1659L12.7796 5.25H10.2311L8.51175 13.6928H11.0602L11.7414 10.3143H13.6327L12.9515 13.6928H15.5022L17.2215 5.25H14.6686Z"
+              fill="white" />
+            <path d="M3.8152 0.330811L3.38428 2.40867H27.9162L28.9435 0.330811H3.8152Z" fill="white" />
+            <path d="M0.428743 16.5344L0 18.6123H19.9006L20.9279 16.5344H0.428743Z" fill="white" />
+            <path
+              d="M23.5592 7.32344L24.5821 5.25464H18.0203L16.301 13.6975H22.3361L23.3567 11.6287H19.1934L19.4436 10.4051H22.0357L23.0586 8.33857H19.8724L20.0791 7.32344H23.5592Z"
+              fill="white" />
+            <path
+              d="M39.0983 0.335205H32.5301L23.4872 18.6167H28.9478L30.6149 14.9119H35.3876L35.6945 18.6076H40.9178L39.0983 0.335205ZM32.3734 10.7585C33.4093 8.51067 34.2581 6.62542 34.9197 5.00075C34.9893 6.5869 35.1221 8.65569 35.2941 10.7585H32.3734Z"
+              fill="white" />
+            <path
+              d="M56.161 0.335205H41.5902L40.7262 4.48865H45.4206L42.5609 18.6167H47.7798L50.6395 4.48865H55.2969L56.161 0.335205Z"
+              fill="white" />
+            <path
+              d="M69.835 2.30205C68.5292 0.799735 66.5509 0.00439453 64.1286 0.00439453C57.6387 0.00439453 54.2414 5.75305 54.2414 11.4314C54.2414 16.1378 56.9967 18.9475 61.6127 18.9475C64.8773 18.9475 67.5411 17.7171 69.317 15.3923C70.8209 13.4232 71.6479 10.72 71.6479 7.77879C71.6479 5.55592 71.019 3.6616 69.835 2.30205ZM62.1372 14.8712C60.0458 14.8712 59.6083 13.0584 59.6083 11.5221C59.6201 9.83196 59.9879 8.16511 60.6856 6.63903C61.2493 5.47208 62.2656 4.0808 63.8957 4.0808C65.5258 4.0808 66.3681 5.21376 66.3681 7.47969C66.3681 10.3325 65.219 14.8712 62.1372 14.8712Z"
+              fill="white" />
+            <path
+              d="M93.4227 0.335304H85.9201L85.8635 0.475791C85.4918 1.36857 85.1087 2.27494 84.73 3.17452C83.5526 5.9752 82.4318 8.6422 81.6265 10.7835C81.7376 7.94203 81.8115 3.47588 81.7897 0.56643V0.339837H74.4598L70.7361 18.6168H75.474L76.6644 12.7594C77.0997 10.6566 77.5241 8.33177 77.8462 6.41479C77.7983 8.66486 77.7852 11.2231 77.7744 13.7201C77.7744 15.3221 77.7592 16.906 77.7417 18.3789V18.6055H81.9791L82.0379 18.465C83.9966 13.8334 85.7856 9.30608 86.9979 6.19499C86.5627 8.12103 86.064 10.4889 85.6571 12.5101L84.4232 18.6055H89.7027L91.2269 11.103H87.4571L93.4227 0.323975V0.335304Z"
+              fill="white" />
+            <path d="M94.4671 0.335205L92.9395 7.83769H96.8806L90.7453 18.6167H96.2714L99.9932 0.335205H94.4671Z"
+              fill="white" />
+            <path
+              d="M108.576 4.07184C109.998 4.07184 110.638 4.8128 110.644 6.47826V6.70485H115.919V6.47826C115.919 4.62699 115.373 3.05897 114.309 1.9464C113.099 0.679748 111.247 0.0090332 108.953 0.0090332C105.763 0.0090332 103.144 1.36859 101.381 3.92455C99.9795 5.96389 99.175 8.683 99.175 11.418C99.175 16.2059 101.747 18.9522 106.232 18.9522C110.683 18.9522 113.658 16.7248 114.833 12.5147L114.919 12.2155H109.617L109.56 12.3629C109.059 13.659 108.37 14.8554 106.731 14.8554C105.316 14.8554 104.628 13.8108 104.628 11.6627C104.624 8.47907 105.997 4.07184 108.576 4.07184Z"
+              fill="white" />
+            <path d="M3.8152 0.335205L3.38428 2.41306H27.9162L28.9435 0.335205H3.8152Z" fill="white" />
+            <path d="M0.428743 16.5388L0 18.6167H19.9006L20.9279 16.5388H0.428743Z" fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="115.919" height="19" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars text-white"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+        </ul>
+        <form class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#workspaces">Workspaces</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#community">Community</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item nav-cta">
+              <a href="#booknow" class="nav-link booknow" aria-current="page">Book Now <span style="margin-left:12px">
+                  <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.2857 0L9.61905 0.694168L14.1905 5.55371H0V6.54544H14.1905L9.61905 11.3059L10.2857 12L16 6.04957L10.2857 0Z"
+                      fill="#FFFEFE" />
+                  </svg>
+                </span></a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="hero">
+    <main class="container">
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <div class="hero-image-wrapper mob-view">
+            <span class="spacer_1">
+              <svg width="80" height="80" viewBox="0 0 117 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M66 6C62.6863 9.31371 62.6863 14.6863 66 18C62.6863 14.6863 57.3137 14.6863 54 18C50.6863 21.3137 50.6863 26.6863 54 30C50.6863 26.6863 45.3137 26.6863 42 30C38.6863 33.3137 38.6863 38.6863 42 42C38.6863 38.6863 33.3137 38.6863 30 42C26.6863 45.3137 26.6863 50.6863 30 54C26.6863 50.6863 21.3137 50.6863 18 54C14.6863 57.3137 14.6863 62.6863 18 66C14.6863 62.6863 9.3137 62.6863 6 66C2.68631 69.3137 2.6863 74.6863 6 78L38.3478 110.348C41.6615 113.662 47.0341 113.662 50.3478 110.348C53.6615 107.034 53.6615 101.662 50.3478 98.3478C53.6615 101.662 59.0341 101.662 62.3478 98.3478C65.6615 95.0341 65.6615 89.6615 62.3478 86.3478C65.6615 89.6615 71.0341 89.6615 74.3478 86.3478C77.6615 83.0341 77.6615 77.6615 74.3478 74.3478C77.6615 77.6615 83.0341 77.6615 86.3478 74.3478C89.6615 71.0341 89.6615 65.6615 86.3478 62.3478C89.6615 65.6615 95.0341 65.6615 98.3478 62.3478C101.662 59.0341 101.662 53.6615 98.3478 50.3478C101.662 53.6615 107.034 53.6615 110.348 50.3478C113.662 47.0341 113.662 41.6615 110.348 38.3478L78 6C74.6863 2.68629 69.3137 2.68629 66 6Z"
+                  fill="#3746FF" />
+              </svg>
+
+            </span>
+            <img src="img/hero_img.png" class="w-100"/>
+            <span class="spacer_2">
+              <svg width="80" height="80" viewBox="0 0 131 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M123.413 58.4668C136.189 50.1928 129.021 30.3407 113.899 32.0776C104.716 33.1323 96.9312 25.3621 97.9853 16.1792C99.7243 1.03046 79.6885 -5.90081 71.5211 6.97556C66.5737 14.7755 55.631 15.9893 49.1172 9.44053C38.3564 -1.37827 20.3056 9.64296 25.0917 24.1321L25.3899 25.035C28.289 33.8113 22.3139 43.0698 13.144 44.2285C-2.06706 46.1506 -4.78134 67.3337 9.66344 72.4737C18.3602 75.5684 21.9228 86.0339 17.0645 93.883C9.06161 106.813 23.7759 122.11 36.6305 113.987C44.4541 109.043 54.8435 112.704 57.8446 121.459C62.7733 135.836 83.7484 133.691 85.6485 118.612L85.7626 117.707C86.9166 108.548 96.2121 102.77 104.943 105.764C119.498 110.756 130.782 92.612 120.056 81.5795C113.618 74.9575 114.793 64.049 122.545 59.0288L123.413 58.4668Z"
+                  fill="white" />
+              </svg>
+
+
+            </span>
+          </div>
+          <h1 class="text-white display-1">
+            Workspaces that spark exponential growth.
+          </h1>
+          <p class="text-white">Workspaces that spark exponential growth.
+            Designed for today’s creative, mobile and entrepreneurial minds.</p>
+
+          <a href="#booknow" class="btn btn-lg btn-light rounded-pill aCta">Book a Space <span><img
+                src="img/aro_r.svg" /></span></a>
+        </div>
+
+
+        <div class="col-md-6 col-xs-12">
+          <div class="hero-image-wrapper desk-view">
+            <span class="spacer_1">
+              <svg width="117" height="117" viewBox="0 0 117 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M66 6C62.6863 9.31371 62.6863 14.6863 66 18C62.6863 14.6863 57.3137 14.6863 54 18C50.6863 21.3137 50.6863 26.6863 54 30C50.6863 26.6863 45.3137 26.6863 42 30C38.6863 33.3137 38.6863 38.6863 42 42C38.6863 38.6863 33.3137 38.6863 30 42C26.6863 45.3137 26.6863 50.6863 30 54C26.6863 50.6863 21.3137 50.6863 18 54C14.6863 57.3137 14.6863 62.6863 18 66C14.6863 62.6863 9.3137 62.6863 6 66C2.68631 69.3137 2.6863 74.6863 6 78L38.3478 110.348C41.6615 113.662 47.0341 113.662 50.3478 110.348C53.6615 107.034 53.6615 101.662 50.3478 98.3478C53.6615 101.662 59.0341 101.662 62.3478 98.3478C65.6615 95.0341 65.6615 89.6615 62.3478 86.3478C65.6615 89.6615 71.0341 89.6615 74.3478 86.3478C77.6615 83.0341 77.6615 77.6615 74.3478 74.3478C77.6615 77.6615 83.0341 77.6615 86.3478 74.3478C89.6615 71.0341 89.6615 65.6615 86.3478 62.3478C89.6615 65.6615 95.0341 65.6615 98.3478 62.3478C101.662 59.0341 101.662 53.6615 98.3478 50.3478C101.662 53.6615 107.034 53.6615 110.348 50.3478C113.662 47.0341 113.662 41.6615 110.348 38.3478L78 6C74.6863 2.68629 69.3137 2.68629 66 6Z"
+                  fill="#3746FF" />
+              </svg>
+
+            </span>
+            <img src="img/hero_img.png" class="w-100"/>
+            <span class="spacer_2">
+              <svg width="131" height="132" viewBox="0 0 131 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M123.413 58.4668C136.189 50.1928 129.021 30.3407 113.899 32.0776C104.716 33.1323 96.9312 25.3621 97.9853 16.1792C99.7243 1.03046 79.6885 -5.90081 71.5211 6.97556C66.5737 14.7755 55.631 15.9893 49.1172 9.44053C38.3564 -1.37827 20.3056 9.64296 25.0917 24.1321L25.3899 25.035C28.289 33.8113 22.3139 43.0698 13.144 44.2285C-2.06706 46.1506 -4.78134 67.3337 9.66344 72.4737C18.3602 75.5684 21.9228 86.0339 17.0645 93.883C9.06161 106.813 23.7759 122.11 36.6305 113.987C44.4541 109.043 54.8435 112.704 57.8446 121.459C62.7733 135.836 83.7484 133.691 85.6485 118.612L85.7626 117.707C86.9166 108.548 96.2121 102.77 104.943 105.764C119.498 110.756 130.782 92.612 120.056 81.5795C113.618 74.9575 114.793 64.049 122.545 59.0288L123.413 58.4668Z"
+                  fill="white" />
+              </svg>
+
+
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+
+    </main>
+  </div>
+
+
+
+
+
+
+<div class="mob-view mt-5" style="padding-left: 20px;">
+
+    <div>
+      <div class="owl-carousel" style="height: 157px;
+      overflow: hidden;">
+        <div class="item">
+          <div class="a_card">
+            <img src="img/mob_space_01.jpg" />
+       
+          </div>
+        </div>
+        <div class="item">
+          <div class="a_card">
+            <img src="img/mob_space_02.jpg" />
+     
+          </div>
+        </div>
+        <div class="item">
+          <div class="a_card">
+            <img src="img/mob_space_03.jpg" />
+
+          </div>
+        </div>
+        <div class="item">
+          <div class="a_card">
+            <img src="img/mob_space_04.jpg" />
+          
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+      <script>
+        $(document).ready(function () {
+          var owl2 = $('.owl-carousel');
+          owl2.owlCarousel({
+            stagePadding: -90,
+
+            nav: false,
+            dots: true,
+            margin: 10,
+
+            loop: true,
+            responsive: {
+              0: {
+                items: 2
+              },
+              600: {
+                items: 3
+              },
+              1000: {
+                items: 4
+              }
+            }
+          })
+        })
+      </script>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper" id="about">
+    <main class="container">
+      <div class="custom-padding">
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            
+            <div class="img-wrapper desk-view">
+              <span class="img_01">
+                <img src="img/space_01.png" class="w-100" />
+              </span>
+              <span class="img_02">
+                <img src="img/space_02.png" class="w-100">
+              </span>
+            </div>
+
+
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="center-content">
+              <p class="section-intro">WE EXIST TO ENABLE INNOVATION</p>
+              <h3 class="section-title">For the New Generation</h3>
+              <p>
+                We offer a place for you to work, create and collaborate. Closely located to Technopark - Trivandrum, We
+                are a vibrant ecosystem for the modern workforce.
+
+              </p>
+            </div>
+
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="img-wrapper desk-view">
+              <span class="img_01">
+                <img src="img/space_04.png" class="w-100" />
+              </span>
+              <span class="img_02" style="z-index: 4;">
+                <img src="img/space_03.png" class="w-100" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <div class="wrapper" style="border-top:2px solid #010101;border-bottom:2px solid #010101" id="workspaces">
+    <div class="slider-Wrapper">
+      <div class="row">
+        <div class="col-md-4 col-xs-12"></div>
+        <div class="col-md-4 col-xs-12">
+          <div class="center-content">
+
+            <h3 class="section-title">Workspaces</h3>
+            <p>
+              The most ambitious workspaces designed
+              for today’s creative, mobile and entrepreneurial minds.
+              <span class="mob-view-padding">COVID-19 Precautions are enabled in our spaces.
+                <a href="#" style="color:#000">Download the manual.</a></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12"></div>
+      </div>
+      <div class="mt-5 mt-xs-2 desk-view">
+        <div class="owl-carousel owl-theme" style="height: 540px;overflow: hidden;">
+          <div class="item">
+            <div class="a_card">
+              <a href="hotdesk.html"><img src="img/slider_01.jpg" /></a>
+              <p class="mt-5 mb-4 slider-title"><a href="hotdesk.html" class="text-dark" style="text-decoration: none;">Hot Desk</a></p>
+              <p>Perfect for the modern-day nomad - flexible and at your convenience. Find your desk, plug in and take
+                the new world of work one day at a time.
+
+              </p>
+              <a href="#booknow" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2">Book Now &#8594;</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="a_card">
+              <img src="img/slider_02.jpg" />
+              <p class="mt-5 mb-4 slider-title">Dedicated Desk</p>
+              <p>Designed for those who require more gear to get the job done. Do your own thing while being part of The
+                Atomic’s diverse community.
+
+              </p>
+              <a href="#booknow" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2">Book Now &#8594;</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="a_card">
+              <img src="img/slider_03.jpg" />
+              <p class="mt-5 mb-4 slider-title">Private Desk</p>
+              <p>Do great work together. Ideal for teams and enterprises who require a convenient and secure workspace
+                to spark ideas and start conversations.
+
+              </p>
+              <a href="#booknow" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2">Book Now &#8594;</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="a_card">
+              <img src="img/slider_03.jpg" />
+              <p class="mt-5 mb-4 slider-title">Events</p>
+              <p>Our Spaces are open to public bookings throughout the year. Anything from board meetings to seminars to
+                get-togethers can be organised conveniently.
+
+              </p>
+              <a href="#booknow" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2">Book Now &#8594;</a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        <script>
+          $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+              stagePadding: -90,
+
+              nav: false,
+              dots: true,
+              margin: 48,
+
+              loop: true,
+              responsive: {
+                0: {
+                  items: 1
+                },
+                600: {
+                  items: 3
+                },
+                1000: {
+                  items: 4
+                }
+              }
+            })
+          })
+        </script>
+      </div>
+
+      <div class="mob-view">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="a_card">
+              <img src="img/slider_01.jpg" class="w-100" />
+              <p class="mt-5 mb-4 slider-title">Hot Desk</p>
+              <p>Perfect for the modern-day nomad - flexible and at your convenience. Find your desk, plug in and take
+                the new world of work one day at a time.
+
+              </p>
+              <a href="hotdesk.html" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2 mb-5">Book Now &#8594;</a>
+            </div>
+          </div>
+
+          <div class="col-xs-12">
+            <div class="a_card">
+              <img src="img/slider_02.jpg" class="w-100" />
+              <p class="mt-5 mb-4 slider-title">Dedicated Desk</p>
+              <p>Designed for those who require more gear to get the job done. Do your own thing while being part of The
+                Atomic’s diverse community.
+
+              </p>
+              <a href="#" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2 mb-5">Book Now &#8594;</a>
+            </div>
+          </div>
+
+          <div class="col-xs-12">
+            <div class="a_card">
+              <img src="img/slider_03.jpg" class="w-100" />
+              <p class="mt-5 mb-4 slider-title">Private Desk</p>
+              <p>Do great work together. Ideal for teams and enterprises who require a convenient and secure workspace
+                to spark ideas and start conversations.
+
+              </p>
+              <a href="#" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2 mb-5">Book Now &#8594;</a>
+            </div>
+          </div>
+
+          <div class="col-xs-12">
+            <div class="a_card">
+              <img src="img/slider_03.jpg" class="w-100" />
+              <p class="mt-5 mb-4 slider-title">Events</p>
+              <p>Our Spaces are open to public bookings throughout the year. Anything from board meetings to seminars to
+                get-togethers can be organised conveniently.
+
+              </p>
+              <a href="#" class="btn btn-lg btn btn-outline-dark rounded-pill aCta mt-2 mb-5">Book Now &#8594;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wrapper" id="community" style="    position: relative;
+border-bottom: 2px solid #000;
+padding-bottom: 190px;">
+    <main class="container">
+      <div class="xl-wrap">
+        <h2>
+          Be surrounded by <span><img class="roundImg" src="img/txt_img_01.png" /></span>interesting <span><img
+              src="img/txt_img_02.png" class="mob-img" /></span> people doing interesting things.<span>
+            <svg width="34" height="65" viewBox="0 0 34 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 47.4515L27.5333 0L19.781 36.2182H34L6 83L13.6095 47.4515H0Z" fill="#3746FF" />
+            </svg>
+
+          </span>
+        </h2>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-3 col-xs-12"></div>
+        <div class="col-md-9 col-xs-12">
+          <p class="lg-desc">We believe people can be more together. We empower members to think creatively as an
+            individual all the while drawing from and building upon the surrounding community. </p>
+        </div>
+      </div>
+
+    </main>
+    <div class="blue-ribbon">
+      <p class="m-0 text-white">Join the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join the -
+        Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic
+        tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe. Join
+        the - Atomic tribe. Join the - Atomic tribe. Join the - Atomic tribe.</p>
+    </div>
+  </div>
+
+  <div class="wrapper position-relative" id="booknow" style="overflow: hidden;">
+    <span class="position-absolute flow-arow">
+      <svg class="mob-svg-arow" width="297" height="902" viewBox="0 0 297 902" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M209.071 233.236C205.094 229.411 204.972 223.087 208.797 219.11L231.814 195.181L202.246 167.312C198.231 163.527 198.044 157.204 201.828 153.189C205.613 149.174 211.936 148.987 215.951 152.771L260.209 194.485L223.197 232.962C219.372 236.939 213.048 237.062 209.071 233.236Z"
+          fill="#121213" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M-409.135 708.014C-567.929 740.325 -705.49 693.072 -786.076 636.869L-774.642 620.478C-698.004 673.928 -565.942 719.528 -413.117 688.433C-260.57 657.393 -85.86 549.618 75.6496 293.664C111.274 237.208 166.902 194.391 232.888 180.39L237.034 199.938C176.988 212.678 125.68 251.823 92.5502 304.326C-71.1539 563.758 -250.061 675.647 -409.135 708.014Z"
+          fill="#121213" />
+      </svg>
+
+    </span>
+    <span class="position-absolute side-star">
+      <svg width="300" height="664" viewBox="0 0 334 664" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M655 208.777L422.734 235.462L449.756 0L322.632 200.476L158.255 35.1672L231.997 258.472L0 287.797L219.082 365.776L94.1643 567.654L293.611 441.587L369.835 664L399.461 428.818L619.434 504.284L456.926 337.083L655 208.777Z"
+          fill="#842AF5" />
+      </svg>
+
+    </span>
+    <main class="container position-relative">
+
+      <div class="row justify-content-md-center">
+        <h2 class="contact-title">Book your Space</h2>
+        <div class="col-md-7 col-xs-12">
+          <form class="row atomicForm">
+
+            <div class="col-md-6 col-xs-12">
+              <input type="text" class="form-control" id="Name" placeholder="Full Name*">
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="email" class="form-control" id="Email" placeholder="Email Address*">
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text" class="form-control" id="Phone" placeholder="Phone Number*">
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <input type="text" class="form-control" id="Phone" placeholder="Company Name">
+            </div>
+
+            <div class="col-md-6 col-xs-12 position-relative">
+              <span style="position: absolute;right:32px;top:23px">
+                <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.425476 1L8.11111 9L15.7968 1" stroke="black" />
+                </svg>
+
+              </span>
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+
+                <option  selected  value="" disabled hidden>Requirement</option>
+                <option value="1">Run an Event</option>
+                <option value="2">Book a Space</option>
+              </select>
+            </div>
+            <div class="col-md-6 col-xs-12 position-relative">
+              <span style="position: absolute;right:32px;top:23px">
+                <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.425476 1L8.11111 9L15.7968 1" stroke="black" />
+                </svg>
+
+              </span>
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+
+                <option selected  value="" disabled hidden>Number of Seats</option>
+                <option value="1">Terrace (80+ seats)</option>
+                <option value="2">Indoor (80 seats)</option>
+                <option value="3">Board Room (10 seats)</option>
+
+              </select>
+            </div>
+
+            <div class="col-md-12 col-xs-12">
+              <textarea rows="4" placeholder="Additional Notes"></textarea>
+            </div>
+
+
+            <a href="#" class="btn btn-lg rounded-pill submit mt-2">Submit Enquiry <span style="margin-left:12px">
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.2857 0L9.61905 0.694168L14.1905 5.55371H0V6.54544H14.1905L9.61905 11.3059L10.2857 12L16 6.04957L10.2857 0Z"
+                    fill="#FFFEFE" />
+                </svg>
+              </span></a>
+          </form>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer id="contact">
+    <main class="container">
+      <div class="desk-view">
+        <div class="row">
+          <div class="col-xs-12 col-md-10">
+            <ul class="ftr-desk-list">
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#workspaces">Workspaces</a>
+              </li>
+              <li>
+                <a href="#community">Community</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <svg width="150" viewBox="0 0 116 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M23.5592 7.3188L24.5821 5.25H18.0203L16.301 13.6928H22.3361L23.3567 11.6241H19.1934L19.4436 10.4005H22.0357L23.0586 8.33393H19.8724L20.0791 7.3188H23.5592Z"
+                  fill="white" />
+                <path
+                  d="M39.0983 0.330811H32.5301L23.4872 18.6123H28.9478L30.6149 14.912H35.3876L35.6945 18.6077H40.9178L39.0983 0.330811ZM32.3734 10.7541C33.4093 8.50628 34.2581 6.62103 34.9197 4.99636C34.9893 6.58251 35.1221 8.6513 35.2941 10.7541H32.3734Z"
+                  fill="white" />
+                <path
+                  d="M56.161 0.330811H41.5902L40.7262 4.48426H45.4206L42.5609 18.6123H47.7798L50.6395 4.48426H55.2969L56.161 0.330811Z"
+                  fill="white" />
+                <path
+                  d="M69.835 2.29765C68.5292 0.79534 66.5509 0 64.1286 0C57.6387 0 54.2414 5.74866 54.2414 11.427C54.2414 16.1334 56.9967 18.9432 61.6127 18.9432C64.8773 18.9432 67.5411 17.7127 69.317 15.3879C70.8209 13.4188 71.6479 10.7156 71.6479 7.7744C71.6479 5.55152 71.019 3.65721 69.835 2.29765ZM62.1372 14.8667C60.0458 14.8667 59.6083 13.054 59.6083 11.5177C59.6201 9.82755 59.9879 8.16071 60.6856 6.63464C61.2493 5.46768 62.2656 4.0764 63.8957 4.0764C65.5258 4.0764 66.3681 5.20936 66.3681 7.4753C66.3681 10.3304 65.219 14.8667 62.1372 14.8667Z"
+                  fill="white" />
+                <path
+                  d="M93.4227 0.330663H85.9201L85.8635 0.471152C85.4918 1.36393 85.1087 2.2703 84.73 3.16987C83.5526 5.97055 82.4318 8.63756 81.6265 10.7789C81.7376 7.93965 81.8115 3.47124 81.7897 0.561788V0.335195H74.4598L70.7361 18.6121H75.474L76.6644 12.7548C77.0997 10.6519 77.5241 8.32939 77.8462 6.41015C77.7983 8.66248 77.7852 11.2185 77.7744 13.7155C77.7744 15.3175 77.7592 16.9014 77.7417 18.3742V18.6008H81.9791L82.0379 18.4603C83.9966 13.8288 85.7856 9.30151 86.9979 6.19035C86.5627 8.11639 86.064 10.4957 85.6571 12.5078L84.4232 18.6008H89.7027L91.2269 11.0984H87.4571L93.4227 0.319336V0.330663Z"
+                  fill="white" />
+                <path d="M94.4671 0.330811L92.9395 7.8333H96.8806L90.7453 18.6123H96.2714L99.9932 0.330811H94.4671Z"
+                  fill="white" />
+                <path
+                  d="M108.576 4.06727C109.998 4.06727 110.638 4.80823 110.644 6.47368V6.70028H115.919V6.47368C115.919 4.62242 115.373 3.0544 114.309 1.94183C113.099 0.672911 111.247 0.00219727 108.953 0.00219727C105.763 0.00219727 103.144 1.36176 101.381 3.91772C99.9795 5.95705 99.175 8.6875 99.175 11.4134C99.175 16.1991 101.747 18.9453 106.232 18.9453C110.683 18.9453 113.658 16.7202 114.833 12.5078L114.919 12.2087H109.617L109.56 12.356C109.059 13.6522 108.37 14.8486 106.731 14.8486C105.316 14.8486 104.628 13.8039 104.628 11.6559C104.624 8.4745 105.997 4.06727 108.576 4.06727Z"
+                  fill="white" />
+                <path
+                  d="M2.35919 7.3188H4.47897L3.18839 13.6928H5.73255L7.02313 7.3188H9.1233L9.55425 5.25H2.79012L2.35919 7.3188Z"
+                  fill="white" />
+                <path
+                  d="M14.6686 5.25L14.0571 8.24556H12.1659L12.7796 5.25H10.2311L8.51175 13.6928H11.0602L11.7414 10.3143H13.6327L12.9515 13.6928H15.5022L17.2215 5.25H14.6686Z"
+                  fill="white" />
+                <path d="M3.8152 0.330811L3.38428 2.40867H27.9162L28.9435 0.330811H3.8152Z" fill="white" />
+                <path d="M0.428743 16.5344L0 18.6123H19.9006L20.9279 16.5344H0.428743Z" fill="white" />
+                <path
+                  d="M23.5592 7.32344L24.5821 5.25464H18.0203L16.301 13.6975H22.3361L23.3567 11.6287H19.1934L19.4436 10.4051H22.0357L23.0586 8.33857H19.8724L20.0791 7.32344H23.5592Z"
+                  fill="white" />
+                <path
+                  d="M39.0983 0.335205H32.5301L23.4872 18.6167H28.9478L30.6149 14.9119H35.3876L35.6945 18.6076H40.9178L39.0983 0.335205ZM32.3734 10.7585C33.4093 8.51067 34.2581 6.62542 34.9197 5.00075C34.9893 6.5869 35.1221 8.65569 35.2941 10.7585H32.3734Z"
+                  fill="white" />
+                <path
+                  d="M56.161 0.335205H41.5902L40.7262 4.48865H45.4206L42.5609 18.6167H47.7798L50.6395 4.48865H55.2969L56.161 0.335205Z"
+                  fill="white" />
+                <path
+                  d="M69.835 2.30205C68.5292 0.799735 66.5509 0.00439453 64.1286 0.00439453C57.6387 0.00439453 54.2414 5.75305 54.2414 11.4314C54.2414 16.1378 56.9967 18.9475 61.6127 18.9475C64.8773 18.9475 67.5411 17.7171 69.317 15.3923C70.8209 13.4232 71.6479 10.72 71.6479 7.77879C71.6479 5.55592 71.019 3.6616 69.835 2.30205ZM62.1372 14.8712C60.0458 14.8712 59.6083 13.0584 59.6083 11.5221C59.6201 9.83196 59.9879 8.16511 60.6856 6.63903C61.2493 5.47208 62.2656 4.0808 63.8957 4.0808C65.5258 4.0808 66.3681 5.21376 66.3681 7.47969C66.3681 10.3325 65.219 14.8712 62.1372 14.8712Z"
+                  fill="white" />
+                <path
+                  d="M93.4227 0.335304H85.9201L85.8635 0.475791C85.4918 1.36857 85.1087 2.27494 84.73 3.17452C83.5526 5.9752 82.4318 8.6422 81.6265 10.7835C81.7376 7.94203 81.8115 3.47588 81.7897 0.56643V0.339837H74.4598L70.7361 18.6168H75.474L76.6644 12.7594C77.0997 10.6566 77.5241 8.33177 77.8462 6.41479C77.7983 8.66486 77.7852 11.2231 77.7744 13.7201C77.7744 15.3221 77.7592 16.906 77.7417 18.3789V18.6055H81.9791L82.0379 18.465C83.9966 13.8334 85.7856 9.30608 86.9979 6.19499C86.5627 8.12103 86.064 10.4889 85.6571 12.5101L84.4232 18.6055H89.7027L91.2269 11.103H87.4571L93.4227 0.323975V0.335304Z"
+                  fill="white" />
+                <path d="M94.4671 0.335205L92.9395 7.83769H96.8806L90.7453 18.6167H96.2714L99.9932 0.335205H94.4671Z"
+                  fill="white" />
+                <path
+                  d="M108.576 4.07184C109.998 4.07184 110.638 4.8128 110.644 6.47826V6.70485H115.919V6.47826C115.919 4.62699 115.373 3.05897 114.309 1.9464C113.099 0.679748 111.247 0.0090332 108.953 0.0090332C105.763 0.0090332 103.144 1.36859 101.381 3.92455C99.9795 5.96389 99.175 8.683 99.175 11.418C99.175 16.2059 101.747 18.9522 106.232 18.9522C110.683 18.9522 113.658 16.7248 114.833 12.5147L114.919 12.2155H109.617L109.56 12.3629C109.059 13.659 108.37 14.8554 106.731 14.8554C105.316 14.8554 104.628 13.8108 104.628 11.6627C104.624 8.47907 105.997 4.07184 108.576 4.07184Z"
+                  fill="white" />
+                <path d="M3.8152 0.335205L3.38428 2.41306H27.9162L28.9435 0.335205H3.8152Z" fill="white" />
+                <path d="M0.428743 16.5388L0 18.6167H19.9006L20.9279 16.5388H0.428743Z" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="115.919" height="19" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-xl-6">
+            <div class="row gx-5">
+              <div class="col-md-4 col-xs-12">
+                <h3 class="desk-ftr-title">Get in touch</h3>
+                <ul class="desk-listing">
+                  <li><a href=#>+91 94964 34303</a></li>
+                  <li><a href=#>+91 85902 42448</a></li>
+                  <li><a href=#>hey@theatomic.space</a></li>
+                  <li><a href=#>Get Directions</a></li>
+
+
+
+                </ul>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <h3 class="desk-ftr-title">Address</h3>
+                <p style="font-size:14px" class="text-white">
+                  The Atomic<br>
+                  Near Technopark Phase 1,
+                  Kazhakootam, 695581,
+                  Trivandrum, Kerala.
+                </p>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <h3 class="desk-ftr-title">Socials</h3>
+                <ul class="desk-listing">
+                  <li><a href=#>Instagram</a></li>
+                  <li><a href=#>Facebook</a></li>
+                  <li><a href=#>Linkedin</a></li>
+                  <li><a href=#>Twitter</a></li>
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-12"></div>
+        </div>
+
+        <div class="copyright">
+          <p class="m-0">© 2021 The Atomic, All rights reserved</p>
+          <p class="m-0">Built by — Gradical Studio <span><img src="img/gradical.png" /></span></p>
+        </div>
+      </div>
+
+      <div class="mob-view">
+        <div class="row">
+          <div class="col-7">
+            <svg width="150" viewBox="0 0 116 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M23.5592 7.3188L24.5821 5.25H18.0203L16.301 13.6928H22.3361L23.3567 11.6241H19.1934L19.4436 10.4005H22.0357L23.0586 8.33393H19.8724L20.0791 7.3188H23.5592Z"
+                  fill="white" />
+                <path
+                  d="M39.0983 0.330811H32.5301L23.4872 18.6123H28.9478L30.6149 14.912H35.3876L35.6945 18.6077H40.9178L39.0983 0.330811ZM32.3734 10.7541C33.4093 8.50628 34.2581 6.62103 34.9197 4.99636C34.9893 6.58251 35.1221 8.6513 35.2941 10.7541H32.3734Z"
+                  fill="white" />
+                <path
+                  d="M56.161 0.330811H41.5902L40.7262 4.48426H45.4206L42.5609 18.6123H47.7798L50.6395 4.48426H55.2969L56.161 0.330811Z"
+                  fill="white" />
+                <path
+                  d="M69.835 2.29765C68.5292 0.79534 66.5509 0 64.1286 0C57.6387 0 54.2414 5.74866 54.2414 11.427C54.2414 16.1334 56.9967 18.9432 61.6127 18.9432C64.8773 18.9432 67.5411 17.7127 69.317 15.3879C70.8209 13.4188 71.6479 10.7156 71.6479 7.7744C71.6479 5.55152 71.019 3.65721 69.835 2.29765ZM62.1372 14.8667C60.0458 14.8667 59.6083 13.054 59.6083 11.5177C59.6201 9.82755 59.9879 8.16071 60.6856 6.63464C61.2493 5.46768 62.2656 4.0764 63.8957 4.0764C65.5258 4.0764 66.3681 5.20936 66.3681 7.4753C66.3681 10.3304 65.219 14.8667 62.1372 14.8667Z"
+                  fill="white" />
+                <path
+                  d="M93.4227 0.330663H85.9201L85.8635 0.471152C85.4918 1.36393 85.1087 2.2703 84.73 3.16987C83.5526 5.97055 82.4318 8.63756 81.6265 10.7789C81.7376 7.93965 81.8115 3.47124 81.7897 0.561788V0.335195H74.4598L70.7361 18.6121H75.474L76.6644 12.7548C77.0997 10.6519 77.5241 8.32939 77.8462 6.41015C77.7983 8.66248 77.7852 11.2185 77.7744 13.7155C77.7744 15.3175 77.7592 16.9014 77.7417 18.3742V18.6008H81.9791L82.0379 18.4603C83.9966 13.8288 85.7856 9.30151 86.9979 6.19035C86.5627 8.11639 86.064 10.4957 85.6571 12.5078L84.4232 18.6008H89.7027L91.2269 11.0984H87.4571L93.4227 0.319336V0.330663Z"
+                  fill="white" />
+                <path d="M94.4671 0.330811L92.9395 7.8333H96.8806L90.7453 18.6123H96.2714L99.9932 0.330811H94.4671Z"
+                  fill="white" />
+                <path
+                  d="M108.576 4.06727C109.998 4.06727 110.638 4.80823 110.644 6.47368V6.70028H115.919V6.47368C115.919 4.62242 115.373 3.0544 114.309 1.94183C113.099 0.672911 111.247 0.00219727 108.953 0.00219727C105.763 0.00219727 103.144 1.36176 101.381 3.91772C99.9795 5.95705 99.175 8.6875 99.175 11.4134C99.175 16.1991 101.747 18.9453 106.232 18.9453C110.683 18.9453 113.658 16.7202 114.833 12.5078L114.919 12.2087H109.617L109.56 12.356C109.059 13.6522 108.37 14.8486 106.731 14.8486C105.316 14.8486 104.628 13.8039 104.628 11.6559C104.624 8.4745 105.997 4.06727 108.576 4.06727Z"
+                  fill="white" />
+                <path
+                  d="M2.35919 7.3188H4.47897L3.18839 13.6928H5.73255L7.02313 7.3188H9.1233L9.55425 5.25H2.79012L2.35919 7.3188Z"
+                  fill="white" />
+                <path
+                  d="M14.6686 5.25L14.0571 8.24556H12.1659L12.7796 5.25H10.2311L8.51175 13.6928H11.0602L11.7414 10.3143H13.6327L12.9515 13.6928H15.5022L17.2215 5.25H14.6686Z"
+                  fill="white" />
+                <path d="M3.8152 0.330811L3.38428 2.40867H27.9162L28.9435 0.330811H3.8152Z" fill="white" />
+                <path d="M0.428743 16.5344L0 18.6123H19.9006L20.9279 16.5344H0.428743Z" fill="white" />
+                <path
+                  d="M23.5592 7.32344L24.5821 5.25464H18.0203L16.301 13.6975H22.3361L23.3567 11.6287H19.1934L19.4436 10.4051H22.0357L23.0586 8.33857H19.8724L20.0791 7.32344H23.5592Z"
+                  fill="white" />
+                <path
+                  d="M39.0983 0.335205H32.5301L23.4872 18.6167H28.9478L30.6149 14.9119H35.3876L35.6945 18.6076H40.9178L39.0983 0.335205ZM32.3734 10.7585C33.4093 8.51067 34.2581 6.62542 34.9197 5.00075C34.9893 6.5869 35.1221 8.65569 35.2941 10.7585H32.3734Z"
+                  fill="white" />
+                <path
+                  d="M56.161 0.335205H41.5902L40.7262 4.48865H45.4206L42.5609 18.6167H47.7798L50.6395 4.48865H55.2969L56.161 0.335205Z"
+                  fill="white" />
+                <path
+                  d="M69.835 2.30205C68.5292 0.799735 66.5509 0.00439453 64.1286 0.00439453C57.6387 0.00439453 54.2414 5.75305 54.2414 11.4314C54.2414 16.1378 56.9967 18.9475 61.6127 18.9475C64.8773 18.9475 67.5411 17.7171 69.317 15.3923C70.8209 13.4232 71.6479 10.72 71.6479 7.77879C71.6479 5.55592 71.019 3.6616 69.835 2.30205ZM62.1372 14.8712C60.0458 14.8712 59.6083 13.0584 59.6083 11.5221C59.6201 9.83196 59.9879 8.16511 60.6856 6.63903C61.2493 5.47208 62.2656 4.0808 63.8957 4.0808C65.5258 4.0808 66.3681 5.21376 66.3681 7.47969C66.3681 10.3325 65.219 14.8712 62.1372 14.8712Z"
+                  fill="white" />
+                <path
+                  d="M93.4227 0.335304H85.9201L85.8635 0.475791C85.4918 1.36857 85.1087 2.27494 84.73 3.17452C83.5526 5.9752 82.4318 8.6422 81.6265 10.7835C81.7376 7.94203 81.8115 3.47588 81.7897 0.56643V0.339837H74.4598L70.7361 18.6168H75.474L76.6644 12.7594C77.0997 10.6566 77.5241 8.33177 77.8462 6.41479C77.7983 8.66486 77.7852 11.2231 77.7744 13.7201C77.7744 15.3221 77.7592 16.906 77.7417 18.3789V18.6055H81.9791L82.0379 18.465C83.9966 13.8334 85.7856 9.30608 86.9979 6.19499C86.5627 8.12103 86.064 10.4889 85.6571 12.5101L84.4232 18.6055H89.7027L91.2269 11.103H87.4571L93.4227 0.323975V0.335304Z"
+                  fill="white" />
+                <path d="M94.4671 0.335205L92.9395 7.83769H96.8806L90.7453 18.6167H96.2714L99.9932 0.335205H94.4671Z"
+                  fill="white" />
+                <path
+                  d="M108.576 4.07184C109.998 4.07184 110.638 4.8128 110.644 6.47826V6.70485H115.919V6.47826C115.919 4.62699 115.373 3.05897 114.309 1.9464C113.099 0.679748 111.247 0.0090332 108.953 0.0090332C105.763 0.0090332 103.144 1.36859 101.381 3.92455C99.9795 5.96389 99.175 8.683 99.175 11.418C99.175 16.2059 101.747 18.9522 106.232 18.9522C110.683 18.9522 113.658 16.7248 114.833 12.5147L114.919 12.2155H109.617L109.56 12.3629C109.059 13.659 108.37 14.8554 106.731 14.8554C105.316 14.8554 104.628 13.8108 104.628 11.6627C104.624 8.47907 105.997 4.07184 108.576 4.07184Z"
+                  fill="white" />
+                <path d="M3.8152 0.335205L3.38428 2.41306H27.9162L28.9435 0.335205H3.8152Z" fill="white" />
+                <path d="M0.428743 16.5388L0 18.6167H19.9006L20.9279 16.5388H0.428743Z" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="115.919" height="19" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="col-5">
+            <ul class="mob-ftr-social">
+              <li><a href="#">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1051 9.59257C12.1051 7.92575 10.7454 6.56611 9.07863 6.56611C7.41181 6.56611 6.05217 7.92575 6.05217 9.59257C6.05217 11.2594 7.41181 12.619 9.07863 12.619C10.7454 12.619 12.1051 11.2594 12.1051 9.59257ZM13.7363 9.59257C13.7363 12.1696 11.6557 14.2503 9.07863 14.2503C6.5016 14.2503 4.42092 12.1696 4.42092 9.59257C4.42092 7.01554 6.5016 4.93485 9.07863 4.93485C11.6557 4.93485 13.7363 7.01554 13.7363 9.59257ZM15.0135 4.7457C15.0135 5.34872 14.5285 5.83296 13.9262 5.83296C13.324 5.83296 12.839 5.34797 12.839 4.7457C12.839 4.14344 13.324 3.65845 13.9262 3.65845C14.5285 3.65845 15.0135 4.14344 15.0135 4.7457ZM9.07863 2.14447C7.75455 2.14447 4.91725 2.03778 3.72332 2.51067C3.30945 2.67636 3.00227 2.87687 2.68297 3.19616C2.36368 3.51545 2.16243 3.82263 1.99748 4.2365C1.5246 5.43044 1.63128 8.26774 1.63128 9.59181C1.63128 10.9159 1.5246 13.7532 1.99748 14.9471C2.16318 15.361 2.36368 15.6682 2.68297 15.9875C3.00227 16.3068 3.30945 16.508 3.72332 16.673C4.91725 17.1458 7.75455 17.0392 9.07863 17.0392C10.4027 17.0392 13.24 17.1458 14.4339 16.673C14.8478 16.5073 15.155 16.3068 15.4743 15.9875C15.7936 15.6682 15.9948 15.361 16.1598 14.9471C16.6327 13.7532 16.526 10.9159 16.526 9.59181C16.526 8.26774 16.6327 5.43044 16.1598 4.2365C15.9941 3.82263 15.7936 3.51545 15.4743 3.19616C15.155 2.87687 14.8478 2.67561 14.4339 2.51067C13.24 2.03778 10.4027 2.14447 9.07863 2.14447ZM18.158 9.59257C18.158 10.8455 18.1701 12.0871 18.099 13.3401C18.0278 14.7943 17.6972 16.0828 16.6334 17.1466C15.5696 18.2104 14.2811 18.5418 12.8269 18.6122C11.5739 18.6833 10.3323 18.6712 9.07938 18.6712C7.82643 18.6712 6.58483 18.6833 5.33188 18.6122C3.87767 18.541 2.58915 18.2104 1.52536 17.1466C0.461558 16.0828 0.130162 14.7943 0.0597967 13.3401C-0.011325 12.0871 0.000780823 10.8455 0.000780823 9.59257C0.000780823 8.33961 -0.011325 7.09801 0.0597967 5.84506C0.130918 4.39085 0.461558 3.10234 1.52536 2.03854C2.58915 0.974742 3.87767 0.643345 5.33188 0.57298C6.58483 0.501859 7.82643 0.513964 9.07938 0.513964C10.3323 0.513964 11.5739 0.501859 12.8269 0.57298C14.2811 0.644102 15.5696 0.974742 16.6334 2.03854C17.6972 3.10234 18.0286 4.39085 18.099 5.84506C18.1701 7.09801 18.158 8.33961 18.158 9.59257Z" fill="white"/>
+                  </svg>
+                  
+              </a></li>
+              <li><a href="#">
+                <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.4957 0.141487V3.26252H8.63978C7.18557 3.26252 6.91394 3.96011 6.91394 4.9649V7.19917H10.3777L9.91694 10.6985H6.91394V19.6712H3.29657V10.6985H0.282227V7.19917H3.29657V4.62215C3.29657 1.63126 5.12909 0 7.80069 0C9.0771 0 10.1772 0.0945767 10.4965 0.141487H10.4957Z" fill="white"/>
+                  </svg>
+                  
+                  
+              </a></li>
+
+              <li><a href="#">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.4158 1.82347C18.8952 2.58008 18.2453 3.25423 17.5008 3.79747C17.5129 3.96317 17.5129 4.12887 17.5129 4.29381C17.5129 9.34194 13.6708 15.158 6.64866 15.158C4.48551 15.158 2.47519 14.5315 0.784912 13.4435C1.0921 13.4791 1.38793 13.4912 1.70722 13.4912C3.49207 13.4912 5.13544 12.8882 6.44816 11.8599C4.76924 11.8244 3.36269 10.725 2.8777 9.2118C3.11452 9.24736 3.35059 9.27081 3.59876 9.27081C3.9415 9.27081 4.28425 9.22315 4.60354 9.14068C2.85425 8.78582 1.54153 7.24914 1.54153 5.39317V5.3455C2.04997 5.62923 2.64088 5.80628 3.26736 5.83049C2.23912 5.145 1.56498 3.97452 1.56498 2.65045C1.56498 1.94074 1.75413 1.29081 2.08553 0.723354C3.96496 3.0401 6.79091 4.55409 9.95885 4.71903C9.89983 4.4353 9.86427 4.13946 9.86427 3.84438C9.86427 1.74024 11.5667 0.0257568 13.6829 0.0257568C14.7823 0.0257568 15.7757 0.486534 16.4725 1.2318C17.3358 1.0661 18.1628 0.746809 18.896 0.309487C18.6122 1.19624 18.0092 1.94075 17.217 2.41363C17.9858 2.33116 18.7303 2.11779 19.4158 1.82271V1.82347Z" fill="white"/>
+                  </svg>
+                  
+                  
+                  
+              </a></li>
+
+              <li><a href="#">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.06209 6.38906V18.1045H1.16099V6.38906H5.06209ZM5.31026 2.77094C5.32237 3.89375 4.47118 4.79261 3.11154 4.79261H3.08809C1.77612 4.79261 0.936279 3.89375 0.936279 2.77094C0.936279 1.62391 1.81092 0.749268 3.135 0.749268C4.47118 0.749268 5.29815 1.62391 5.31026 2.77094ZM19.095 11.3895V18.1045H15.2052V11.8389C15.2052 10.2667 14.6378 9.1908 13.2312 9.1908C12.1553 9.1908 11.5168 9.91185 11.233 10.6094C11.1385 10.8697 11.1029 11.2125 11.1029 11.5673V18.1052H7.21314C7.26081 7.48918 7.21314 6.38982 7.21314 6.38982H11.1029V8.0922H11.0794C11.5879 7.28867 12.5102 6.11819 14.6143 6.11819C17.18 6.11819 19.095 7.79712 19.095 11.391V11.3895Z" fill="white"/>
+                  </svg>
+                  
+                  
+                  
+                  
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+<div class="row mt-5">
+  <div class="col-6">
+    <p class="text-white" style="font-size:14px">+91 94964 34303,<br> 
+      +91 85902 42448</p>
+  </div>
+  <div class="col-6">
+    <a href="#" class="text-white" style="font-size:14px;text-decoration: none;">hey@theatomic.space</a>
+    <a href="#" class="text-white" style="font-size:14px;text-decoration: none;">Get Directions</a>
+  </div>
+  <div class="col-12 mt-3">
+    <p class="text-white" style="font-size:14px;line-height: 20px;">The Atomic Near Technopark Phase 1,<br> 
+      Kazhakootam, 695581, Trivandrum, Kerala.</p>
+  </div>
+
+  <div class="col-12 mt-3">
+    <p class="text-white" style="font-size:14px;line-height: 20px;margin:0">© 2021 The Atomic, All rights reserved</p>
+    <p class="text-white" style="font-size:13px;line-height: 20px;font-weight: 300;">Built by — Gradical Studio <span><img src="img/gradical.png" /></span></p>
+  </div>
+
+</div>
+
+      </div>
+    </main>
+  </footer>
+
+  <!-- /.container -->
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 50) {
+        $(".header").addClass("active");
+      } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $(".header").removeClass("active");
+      }
+    });
+  </script>
+</body>
+
+</html>
